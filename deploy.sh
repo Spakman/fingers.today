@@ -24,13 +24,13 @@ if [ -z "$1" ]; then
   echo "Usage: deploy <gitobject>"
 else
   revision_for_log=$(git rev-parse $1)
-  git checkout -b deploy
-  fingerprint_files
-  git add public/* views/*
-  git commit -q -m "Deploy: $(date)"
-  git archive -o deploy.tar.gz HEAD
-  scp deploy.tar.gz ${hostname}:${sitepath}
-  rm deploy.tar.gz
+  git checkout -b deploy &&
+  fingerprint_files &&
+  git add public/* views/* &&
+  git commit -q -m "Deploy: $(date)" &&
+  git archive -o deploy.tar.gz HEAD &&
+  scp deploy.tar.gz ${hostname}:${sitepath} &&
+  rm deploy.tar.gz &&
   ssh -t ${hostname} "
     cd ${sitepath} &&
     tar -zxvf deploy.tar.gz &&
