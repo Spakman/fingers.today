@@ -22,7 +22,7 @@ nav {
 }
 
 ul.directoryIndex {
-  margin: 20px;
+  margin: 0 20px 20px 20px;
   padding: 0;
   list-style: none;
   pointer-events: auto;
@@ -147,10 +147,6 @@ h1 {
   color: #555;
 }
 
-h2 {
-  color: #a5c501;
-}
-
 header {
   display: flex;
   align-items: center;
@@ -216,8 +212,9 @@ pre code {
 }
 
 h2 {
+  margin-top: 5px;
+  color: #a5c501;
   line-height: 1;
-  margin-top: 30px;
 }
 
 footer {
