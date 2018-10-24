@@ -217,6 +217,12 @@ h2 {
   line-height: 1;
 }
 
+span {
+  color: #555;
+  font-size: 16px;
+  font-weight: normal;
+}
+
 footer {
   clear: both;
 }
