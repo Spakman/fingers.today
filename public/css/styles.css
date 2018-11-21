@@ -234,3 +234,7 @@ span {
 footer {
   clear: both;
 }
+
+.not-saved {
+  background: #f04b4b80 !important;
+}
