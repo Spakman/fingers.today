@@ -67,6 +67,11 @@
 
   </main>
 
-  <footer></footer>
+  <footer>
+    <ul id="metadata">
+      <li>Last modified: <%= page.last_modified.strftime("%d %B %Y") %></li>
+      <li>Created: <%= page.created.strftime("%d %B %Y") %></li>
+    </ul>
+  </footer>
 </body>
 </html>
